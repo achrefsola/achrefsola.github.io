@@ -690,12 +690,38 @@ body {
     transition: var(--transition-base);
     cursor: pointer;
     border: 2px solid transparent;
+    position: relative;
 }
 
 .cert-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--card-shadow);
     border-color: var(--primary-color);
+}
+
+.cert-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+    transition: var(--transition-base);
+}
+
+.cert-badge i {
+    font-size: 1.5rem;
+    color: var(--text-white);
+}
+
+.cert-card:hover .cert-badge {
+    transform: rotate(10deg) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.5);
 }
 
 .cert-icon {
@@ -1003,5 +1029,16 @@ body {
 
     .project-metrics {
         grid-template-columns: 1fr;
+    }
+
+    .cert-badge {
+        width: 40px;
+        height: 40px;
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .cert-badge i {
+        font-size: 1.25rem;
     }
 }
